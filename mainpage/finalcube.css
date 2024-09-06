@@ -1,0 +1,400 @@
+/* 큐브 크기를 조정하는 변수 */
+
+:root {
+    --cube-size: 350px;
+    --translate-dist: calc(var(--cube-size) / 2);
+}
+
+
+body {
+    height: 350vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    overflow-x: hidden;
+    transition: background-color 0.5s;
+}
+
+
+/* 우측 메뉴 */
+navb {
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+position: fixed;
+width: 45%;
+height: 10%;
+left: 66%;
+top: 3%;
+z-index: 1;
+}
+
+navb ul {
+    list-style-type: none;
+    margin: 5;
+    padding: 0;
+}
+
+navb ul li {
+    
+    display: inline;
+    margin-right: 175px; /* 내비게이션 항목 간격 설정 */
+}
+
+navb ul li:last-child {
+    margin-right: -100; /* 마지막 내비게이션 항목의 오른쪽 여백 제거 */
+}
+/* 우측 메뉴 색상 */
+navb ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* 좌측 표기 */
+navc {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 100px;
+
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    left: 3%;
+    top: 4%;
+}
+
+navc ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+navc ul li {
+    display: inline;
+    margin-right: 180px; /* 내비게이션 항목 간격 설정 */
+}
+
+navc ul li:last-child {
+    margin-right: 0; /* 마지막 내비게이션 항목의 오른쪽 여백 제거 */
+}
+/* 우측 메뉴 색상 */
+navc ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+}
+ 
+.scene {
+    width: 250px;
+    height: 250px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+}
+
+
+/* 배경 글자 */
+.firsttext {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+    font-family: 'Archivo';
+    font-style: Bold;
+    font-size: 320px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 340px;
+    display: block;
+}
+
+.backtext {
+    display: block;
+    position: absolute;
+    top: -35%;
+    left: -50%;
+    transform: translate(-50%, -50%);
+    z-index: -2; /* 큐브 뒤에 배치 */
+    font-family: 'Archivo';
+    font-style: Bold;
+    font-size: 260px;
+    color: #000;
+    letter-spacing: 0;
+    line-height: 18px;
+    display: none;
+    text-align: center;
+
+}
+
+.smalltext{
+    position: absolute;
+    top: 110%;
+    right:-48%;
+
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0.08em;
+    text-align: left;
+    color: #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 2023 work의 2023 표현부*/
+.left1text{
+position: absolute;
+top: -30%;
+left: -80%;
+transform: translate(-50%, -50%);
+display: none;
+font-family: 'Archivo';
+font-style: normal;
+font-weight: 600;
+font-size: 230px;
+line-height: 272px;
+letter-spacing: 0.05em;
+color: #000000;
+z-index: -2;
+}
+
+/* work */
+.ltotext{
+position: absolute;
+top: 72%;
+left: 28%;
+transform: translate(-50%, -50%);
+display: block;
+font-family: 'Archivo';
+font-style: normal;
+font-weight: 500;
+font-size: 128px;
+line-height: 139px;
+text-align: left;
+letter-spacing: 0.05em;
+color: #000000;
+z-index: -2;
+}
+
+
+.stext{
+    position: absolute;
+    top: 98%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.08em;
+    text-align: left;
+    color: #000000;
+    z-index: -2;
+}
+
+.Listwork {
+    position: absolute;
+    width: 262px;
+    height: auto; 
+    left: 900px;
+    top: 500px;
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.1em;
+    color: #000000;
+}
+
+.Listwork ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+}
+
+.Listwork li {
+    margin-bottom: 10px; 
+}
+
+.linriver {
+    width: 100%; 
+    height: 2px;
+    background-color: #000; 
+    margin: 6px 0; 
+}
+
+
+
+.bbut {
+ 
+    box-sizing: border-box;
+    
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    top: 106%;
+    left: 184%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    border: 1px solid #1a1919;
+    border-radius: 52px;
+    
+    }
+
+.intocube {
+   
+
+    position: absolute;
+    width: 200px;
+    height: 41px;
+    left: 14%;
+    top: -230%;
+
+    font-family: 'Major Mono Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+ 
+    letter-spacing: 0px;
+
+    color: #424242;
+    justify-content: center;
+
+}
+
+.intocube:hover {
+    color: #0030dd;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 2024 work */
+.righttext{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 230px;
+    line-height: 240px;
+    z-index: 2;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 2025 work */
+.endtext{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 230px;
+    line-height: 240px;
+    z-index: 2;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.back-link {
+    display: inline;
+
+    color: #020202;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+ 
+
+
+
+
+
+
+
+
+
+
+/* Cube 회전, 크기 설정*/
+
+.cube {
+    top:-10%;
+    left: -14%;
+    position: relative;
+    width: var(--cube-size);
+    height: var(--cube-size);
+    transform-style: preserve-3d;
+    transform: rotateX(-30deg) rotateY(-45deg);
+}
+
+.cube__face {
+    position: absolute;
+    width: var(--cube-size);
+    height: var(--cube-size);
+}
+
+.cube__face--front  { transform: translateZ(var(--translate-dist)); background: linear-gradient(45deg, #F6F6F6, #D3D3D3) }
+.cube__face--back   { transform: rotateY(180deg) translateZ(var(--translate-dist)); background: linear-gradient(45deg, #F6F6F6, #D3D3D3); }
+.cube__face--right  { transform: rotateY(90deg) translateZ(var(--translate-dist)); background: linear-gradient(45deg, #F6F6F6, #D3D3D3); }
+.cube__face--left   { transform: rotateY(-90deg) translateZ(var(--translate-dist)); background: linear-gradient(45deg, #F6F6F6, #D3D3D3); }
+.cube__face--top    { transform: rotateX(90deg) translateZ(var(--translate-dist)); background: linear-gradient(45deg, #F6F6F6, #D3D3D3); }
+.cube__face--bottom { transform: rotateX(-90deg) translateZ(var(--translate-dist)); background: linear-gradient(45deg, #F6F6F6, #D3D3D3); }

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C375141 최서연</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+    
+    <link rel="stylesheet" href="finalcube.css">
+    <script src="finalcube.js"></script>
+</head>
+
+
+
+
+
+<body>
+
+    <header>
+        <navc>
+            <ul>
+                <li><a href="./final.html">CUBE</a></li>
+                               
+            </ul>
+        </navc>
+        <navb>
+            <ul>
+                <li>
+                    <a href="#Home" onclick="gotoHome(event)">
+                    Home</a>
+                </li>
+                <li>
+                    <a href="#backtext" onclick="gotoAbout(event)">
+                    About</a>
+                </li>
+                <li>
+                    <a href="#left1text" onclick="gotoWork(event)" >
+                    Work</a>
+
+                </li>
+            </ul>
+        </navb>
+        
+    </header>
+
+    <!--큐브가 중앙에 오도록 합니다.-->
+    <div class="scene" ID="scene">
+        <!-- 첫화면-->
+        <div class="firsttext" id="firsttext">
+            <p>Cube <br>
+            Exhibition</p>
+        </div>
+    
+
+
+        <!-- 두번째 화면-->
+        <div class="backtext" id="backtext">
+            <p>ABOUT</p>
+                <div class="smalltext" id="smalltext">
+                    <p>Cubes are common in daily life, <br> 
+                        but we can't see inside them<br>
+                        from the outside.</p>
+                </div>
+        </div>
+    
+        
+
+        <!-- 세번째 화면-->
+        <div class="left1text" id="left1text">
+            
+            <p >2023</p>
+            
+            <div class="ltotext" id="ltotext"> work </div>
+            
+            <div class="stext" id="stext">
+                It will open the door to a new world where<br>
+                free imagination unfolds with infinite<br>
+                possibilities with an exhibition that flexibly<br>
+                changes yet contains the inherent<br>
+                robustness.<br>
+            </div>
+
+            <div class="Listwork">
+                <div>&nbsp;list of works</div>
+                <ul>    
+                    <li class="linriver"></li>
+                    <li><a class="back-link" href="..//2023cube/2023cube.html">
+                        &nbsp;river</a>
+                    </li>
+                    <li class="linriver"></li>
+                        <a class="back-link" href="..//2023cube/2023cube.html#steadfasts">
+                        &nbsp;steadfast</a>
+                    </li>
+                    <li class="linriver"></li>
+                    <li>&nbsp;co-exist</li>
+                    <li class="linriver"></li>
+                </ul>
+            </div>
+            
+
+
+            <div class="bbut">
+                <div class="intocube" onClick="location.href='../2023cube/2023cube.html'">
+                    Into&nbsp;The&nbsp;Cube&nbsp;&rarr;
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!-- 네번째 화면-->
+        <div class="righttext" id="righttext">
+            <div>2024&nbsp;&nbsp;WORK</div>
+            <div style="text-align: center; font-size: 170px;">
+                Open&nbsp;Soon
+            </div>
+        </div>
+
+        <!--마지막 화면-->
+        <div class="endtext" id="endtext">
+            <div>2025&nbsp;&nbsp;WORK</div>
+            <div style="text-align: center; font-size: 170px;">
+                Not&nbsp;Open
+            </div>
+        </div>
+
+<!-- Cube -->            
+        <div class="cube" id="cube">  
+            <div class="cube__face cube__face--front"></div>
+            <div class="cube__face cube__face--back"></div>
+            <div class="cube__face cube__face--right"></div>
+            <div class="cube__face cube__face--left"></div>
+            <div class="cube__face cube__face--top"></div>
+            <div class="cube__face cube__face--bottom"></div>
+        </div>
+    </div>
+
+    <script>
+        function gotoHome(event) {
+            
+            //스크로류이벤트 발생 중지
+            event.preventDefault();
+            //원하는 위치로 스크롤 값을 넣어줌
+            document.documentElement.scrollTop = 0;
+            
+        }
+        function gotoAbout(event) {
+            event.preventDefault();
+            document.documentElement.scrollTop = 445;
+        }
+        function gotoWork(event) {
+            event.preventDefault();
+            document.documentElement.scrollTop = 900;
+        }
+    </script>
+
+</body>
+
+</html>
