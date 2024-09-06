@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023 cube</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="2023cube.css">
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <video autoplay muted>
+                <source src="water.mp4" type="video/mp4">
+            </video>
+            <div class="text-overlay">
+                river
+                <p>arena, arduino</p>
+            </div>
+        </div>
+
+        <div class="mySlides">
+            <video autoplay muted>
+                <source src="lines.mp4" type="video/mp4">
+            </video>
+            <div class="text-overlay">
+                steadfast
+                <p>arena, processing</p>
+            </div>
+        </div>
+
+        <div class="mySlides">
+            <video autoplay muted>
+                <source src="middle.mp4" type="video/mp4">
+            </video>
+            <div class="text-overlay">
+                co-exist
+                <p>arena, arduino</p>
+            </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <div class="text-container" id="text1">
+        <h1>RIVER</h1>
+        <h3>변화와 유연성</h3>
+        <p>유연하고 끊임없이 변화하는 특성을 갖추어 자연의 흐름과 생명의 물결을 상징하는 강을<br>
+            표현한 미디어아트이다. 삶도 변화와 선택의 연속이며, 유연함과 굳건함이 필요하고 새로운 경험에<br>
+            대한 개방적인 태도가 중요하다. 이 작품은 관람객이 참여하면서 우리가 삶의 흐름에 따라 적응하고<br>
+            변화하는 것을 상기시키며, 유연함이 주는 힘을 강조한다.
+        </p>
+        <p class="info">Media art, Beam projector<br>Working period - 3 weeks<br>Tool - After effect, Arduino, Arena, Processing</p>
+    </div>
+
+    <div class="text-container" id="text2">
+        <h1>STEADFAST</h1>
+        <h3>견고함과 굳건함</h3>
+        <p>작품은 직선의 형태를 사용하여 불변성과 강인함을 강조하며, 빔프로젝터를 통해 직선을 벽에<br> 
+            비추어 공간 안에서 긍정적인 에너지와 결연한 의지를 전달한다. 빔의 각도나 세기를 조절하여<br>
+            작품의 인상을 변화시킬 수 있지만, 핵심 메시지는 변하지 않는다. 이 작품은 관람자들에게 자신의<br>
+            내면에서 힘을 찾고, 어떠한 어려움에도 굴하지 않고 단단하게 서있을 수 있도록 격려한다.</p>
+        <p class="info">Media art, Beam projector<br>Working period - 3 weeks<br>Tool - After effect, Arduino, Arena, Processing</p>
+    </div>
+
+    <div class="text-container" id="text3">
+        <h1>CO-EXIST</h1>
+        <h3>조화로운 공존</h3>
+        <p>이 작품은  과도한 극단에 빠지지 않고, 균형과 조화를 찾는 것이 중요하다는 메시지를 전달한다.<br>
+            작품과 조화롭게 공존하는 경험을 통해 균형과 조화를 찾는 과정을 체험할 수 있도록, 관람자가<br>
+            작품의 중간에 위치하면, 작품이 나타나며 공존하는 순간을 경험한다.  관람자는 작품과 함께 자신의<br> 
+            위치와 상호작용하면서, 삶의 여러 측면에서 균형을 찾는 과정에 대한 깨달음을 얻을 수 있게 격려한다.</p>
+        <p class="info">Media art, Beam projector<br>Working period - 3 weeks<br>Tool - After effect, Arduino, Arena, Processing</p>
+    </div>
+
+    <div class="image-container">
+        <div class="image-section" id="image1">
+            <img src="image1.png" alt="Media Art Image 1">
+            <img src="image2.png" alt="Media Art Image 2">
+            <img src="image3.png" alt="Media Art Image 3">
+        </div>
+        <div class="image-section" id="image2">
+            <img src="image4.png" alt="Media Art Image 4">
+            <img src="image5.png" alt="Media Art Image 5">
+            <img src="image6.png" alt="Media Art Image 6">
+        </div>
+        <div class="image-section" id="image3">
+            <img src="image7.png" alt="Media Art Image 7">
+            <img src="image8.png" alt="Media Art Image 8">
+            <img src="image9.png" alt="Media Art Image 9">
+        </div>
+    </div>
+
+    <a class="back-link" href="#" onclick="goToFinalCube()">← back to the cube</a>
+
+<script>
+    function goToFinalCube() {
+        // finalcube.html 파일의 URL을 가져옵니다.
+        var finalCubeURL = "../final/finalcube.html";
+
+        // URL에 #left1text 부분을 추가합니다.
+        finalCubeURL += "#left1text";
+
+        // finalcube.html 파일을 열고 스크롤 위치를 1000으로 설정합니다.
+        window.location.href = finalCubeURL;
+        
+        // 페이지 이동 시 스크롤 위치를 조정합니다.
+        
+            event.preventDefault();
+            document.documentElement.scrollTop = 800;
+            }
+</script>
+
+    <footer>
+        <div class="footer-content">
+            <div class="copyright">
+                <p>저작권 © 2024. 포트폴리오 사이트. 모든 권리 보유됨.<br>
+                이메일: contact@example.com<br>
+                전화번호: 123-456-7890</p>
+            </div>
+            <div class="contact-info">
+                
+                <i class="icon1">
+                    <img src="Group 1.png" alt="icon1">
+                </i>
+                <i class="icon2">
+                    <img src="Group 2.png" alt="icon1">
+                </i>
+            </div>
+        </div>
+    </footer>
+        
+
+    <script src="2023cube.js"></script>
+</body>
+</html>
